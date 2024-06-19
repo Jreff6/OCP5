@@ -1,0 +1,26 @@
+.QuoteWrapper{
+    background-image: url('../../assets/falaise.png');
+    background-size: cover;
+    background-position: center;
+    max-width: 1240px;
+    width: 98%;
+    max-height: 223px;
+    height: 25vh;
+    display: flex;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.text{
+    color: white;
+    font-weight: 700;
+    font-size: 48px; 
+    text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000; /* Bordure simulée en utilisant des ombres */
+  }
+
