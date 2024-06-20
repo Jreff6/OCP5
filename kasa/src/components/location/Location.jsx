@@ -2,26 +2,12 @@ import React from 'react';
 import './location.scss';
 
 const Location = ({ location }) => {
+  const imageUrl = location.pictures && location.pictures.length > 0 ? location.pictures[0] : location.cover;
   return (
     <div className="location-card">
-      <img src={location.cover} alt={location.title} className="location-cover" />
-      <h2>{location.title}</h2>
-      <p>{location.description}</p>
-      <div className="host-info">
-        <img src={location.host.picture} alt={location.host.name} className="host-picture" />
-        <p>{location.host.name}</p>
-      </div>
-      <p>Location: {location.location}</p>
-      <p>Rating: {location.rating}</p>
-      <ul>
-        {location.equipments.map((equipment, index) => (
-          <li key={index}>{equipment}</li>
-        ))}
-      </ul>
-      <div className="tags">
-        {location.tags.map((tag, index) => (
-          <span key={index} className="tag">{tag}</span>
-        ))}
+      <div className="image-container">
+        <img src={imageUrl} alt={location.title} className="location-cover" />
+        <div className="title-overlay">{location.title}</div>
       </div>
     </div>
   );

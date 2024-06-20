@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import Location from './components/location/Location';
-import locationsData from './datas/logements.json';
+import Location from '../location/Location';
+import locationsData from '../../datas/logements.json';
+import './gate.scss' ;
 
 const Gate = () => {
   const [locations, setLocations] = useState([]);

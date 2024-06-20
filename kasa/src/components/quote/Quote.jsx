@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './quote.scss' ;
+import './Quote.scss' ;
 
 function Quote () {
     return (

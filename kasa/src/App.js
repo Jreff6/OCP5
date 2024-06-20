@@ -1,8 +1,8 @@
 import './App.css';
-import Banner from './components/banner/Banner'
-import Quote from './components/quote/Quote'
+import Banner from './components/banner/Banner';
+import Quote from './components/quote/Quote';
 import React from 'react';
-import Gate from './gate';
+import Gate from './components/gate/Gate';
 import Footer from './components/footer/Footer';
 
 function App() {

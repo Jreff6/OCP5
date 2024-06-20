@@ -1,0 +1,12 @@
+.gate {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(2, auto); 
+    gap: 70px; 
+    justify-items: center; 
+    align-items: start; 
+    overflow: hidden;
+    background-color: #F6F6F6;
+    border-radius: 25px;
+    
+  }
