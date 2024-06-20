@@ -1,0 +1,19 @@
+.FooterWrapper{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 209px;
+
+}
+
+.FooterWrapper p{
+    color: white;
+}
+
+.imgWrap{
+    max-height: 209px;
+    height: auto;
+    margin-top: 3%;
+}

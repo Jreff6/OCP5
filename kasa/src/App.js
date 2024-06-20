@@ -3,6 +3,7 @@ import Banner from './components/banner/Banner'
 import Quote from './components/quote/Quote'
 import React from 'react';
 import Gate from './gate';
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Banner />
       <Quote />
       <Gate />
+      <Footer/>
     </React.Fragment>   
   );
 }
