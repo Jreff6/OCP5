@@ -8,9 +8,14 @@ import Footer from './components/footer/Footer';
 function App() {
   return (
     <React.Fragment>
-      <Banner />
-      <Quote />
-      <Gate />
+      <div className='top'>
+        <Banner />
+        <Quote />
+      </div>
+      <div className='mid'>
+        <Gate />
+      </div>
+      
       <Footer/>
     </React.Fragment>   
   );

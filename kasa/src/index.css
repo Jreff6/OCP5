@@ -1,5 +1,6 @@
 body {
-  margin: 2% 4% 0 4%;
+  margin: auto;
+  max-width: 1440px;
   font-family: -montserrat, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -12,4 +13,5 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
