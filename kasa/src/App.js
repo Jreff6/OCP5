@@ -1,24 +1,38 @@
 import './App.css';
-import Banner from './components/banner/Banner';
-import Quote from './components/quote/Quote';
 import React from 'react';
-import Gate from './components/gate/Gate';
-import Footer from './components/footer/Footer';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Home from './pages/home/Home';
+import About from './pages/about/About';
+import Product from './pages/product/Product';
+import Error from './pages/error/Error';
+
+
+
+const router = createBrowserRouter([
+	{
+		path: "/",
+		element: <Home />
+	},
+	{
+		path: "/product/:id",
+		element: <Product />
+	},
+	{
+		path: '/about',
+		element: <About />
+	},
+	{
+		path: "*",
+		element: <Error />
+	},
+]);
 
 function App() {
-  return (
-    <React.Fragment>
-      <div className='top'>
-        <Banner />
-        <Quote />
-      </div>
-      <div className='mid'>
-        <Gate />
-      </div>
-      
-      <Footer/>
-    </React.Fragment>   
-  );
+	return (
+		<>
+			<RouterProvider router={router}/>
+		</>
+	);
 }
 
 export default App;
