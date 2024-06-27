@@ -1,26 +1,22 @@
-import { useRouteError } from "react-router-dom";
 import './error.scss'
-import Banner from './components/banner/Banner';
 import React from 'react';
-import Footer from './components/footer/Footer';
 
 
 
-export default function ErrorPage() {
+function Error() {
   const error = useRouteError();
   console.error(error);
 
   return (
-    <div id="error-page">
-      <Banner />
-      <div className="main">
+    <div id="main">
+      <div className="wrapper">
         <p className="errorNum">404</p>
-        <p>
-            <i>{error.statusText || error.message}</i>
-        </p>
+        <p className="info">Oups! La page que vous demandez n'existe pas.</p>
         <a href="#">Retourner sur la page d'accueil</a>
       </div>      
-      <Footer />
+      
     </div>
   );
 }
+
+export default Error;

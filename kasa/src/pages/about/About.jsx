@@ -3,7 +3,7 @@ import Mountain from '../../components/mountain/Mountain';
 import Collapse from '../../components/collapse/Collapse';
 import Footer from '../../components/footer/Footer';
 import Banner from '../../components/banner/Banner'
-export default function About() {
+function About() {
 
 	const aboutDatas = [
 		{
@@ -45,3 +45,5 @@ export default function About() {
 		</div>
 	)
 }
+
+export default About;
