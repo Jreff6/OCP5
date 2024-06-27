@@ -1,0 +1,26 @@
+#main{
+    width: 100%;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #FF6060;
+}
+.errorNum{
+    font-size: 288px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.info{
+    font-size: 36px;
+    margin: 0px;
+}
+
+.return{
+    color: black;
+    text-decoration: underline;
+}

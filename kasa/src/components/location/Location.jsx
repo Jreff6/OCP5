@@ -2,7 +2,7 @@ import React from 'react';
 import './location.scss';
 
 const Location = ({ location }) => {
-  const imageUrl = location.pictures && location.pictures.length > 0 ? location.pictures[0] : location.cover;
+  const imageUrl = location.cover;
   return (
     <div className="location-card">
       <div className="image-container">
