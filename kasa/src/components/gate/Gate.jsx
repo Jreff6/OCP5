@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Location from '../location/Location';
+import { Link } from 'react-router-dom'
 import locationsData from '../../datas/logements.json';
 import './gate.scss' ;
 
@@ -12,8 +13,10 @@ const Gate = () => {
 
   return (
     <div className="gate">
+      
       {locations.map(location => (
         <Location key={location.id} location={location} /> // Passer les données en props
+                 
       ))}
     </div>
   );
