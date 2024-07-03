@@ -6,7 +6,7 @@ const Location = ({ location }) => {
 
   const navigate = useNavigate();
 
-    const handleNavigate = () => {
+  const handleNavigate = () => {
         navigate(`/accomodation/${location.id}`);
     };
   const imageUrl = location.cover;
