@@ -23,8 +23,12 @@ function AccommodationDetails() {
     <div className='wrapper'>
       <div className='carousel'>
         <img src={pictures[currentIndex]} alt={accommodation.title} className='carousel-image' />
-        <button className='carousel-button prev' onClick={handlePrev}>&lt;</button>
-        <button className='carousel-button next' onClick={handleNext}>&gt;</button>
+        {pictures.length > 1 && (
+        <div className='buttonWrap'>
+          <button className='carousel-button prev' onClick={handlePrev}>&lt;</button>
+          <button className='carousel-button next' onClick={handleNext}>&gt;</button>
+        </div>
+  )}
         <p className='imgCounter'>
           {pictures.length > 1 ? `${currentIndex + 1}/${pictures.length}` : ''}
         </p>
