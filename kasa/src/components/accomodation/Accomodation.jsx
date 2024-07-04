@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import accommodations from '../../datas/logements.json';
-import './accomodation.scss'
-import '../../assets/downArrow.png'
+import './accomodation.scss';
+import downArrow from '../../assets/downArrow.png'; // Assurez-vous que l'image est importée correctement
 
 function AccommodationDetails() {
   const { id } = useParams();
@@ -10,6 +10,7 @@ function AccommodationDetails() {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const pictures = accommodation.pictures;
+
   const handlePrev = () => {
     setCurrentIndex((prevIndex) => (prevIndex === 0 ? pictures.length - 1 : prevIndex - 1));
   };
@@ -18,7 +19,6 @@ function AccommodationDetails() {
     setCurrentIndex((prevIndex) => (prevIndex === pictures.length - 1 ? 0 : prevIndex + 1));
   };
 
-
   return (
     <div className='wrapper'>
       <div className='carousel'>
@@ -26,9 +26,8 @@ function AccommodationDetails() {
         <button className='carousel-button prev' onClick={handlePrev}>&lt;</button>
         <button className='carousel-button next' onClick={handleNext}>&gt;</button>
         <p className='imgCounter'>
-           {pictures.length > 1 ? `${currentIndex + 1}/${pictures.length}` : ''}
+          {pictures.length > 1 ? `${currentIndex + 1}/${pictures.length}` : ''}
         </p>
-
       </div>
 
       <div className='leftWrap'>
@@ -40,17 +39,29 @@ function AccommodationDetails() {
           ))}
         </div>
       </div>
-      
 
+      <div className='rightWrap'>
+        <div className='host'>
+          <p className='hostname'> {accommodation.host.name}</p>
+          <img src={accommodation.host.picture} alt="host" className='hostPic' />
+          <span className='hostRating'></span>
+        </div>
+      </div>
+
+      <div className='bottomWrap'>
         <div className='description'>
           <p className='descTitle'>Description</p>
-          <img src="../../assets/downArrow" alt="downArrow" />
+          <img src={downArrow} alt="downArrow" />
           <p>{accommodation.description}</p>
         </div>
-        <div className='host'>
-          <p></p>
+        <div className='EquipmentsWrap'>
+          <div className='equipments'>
+            {accommodation.equipments.map((equipment, index) => (
+              <span key={index} className='equipment'>{equipment}</span>
+            ))}
+          </div>
         </div>
-    
+      </div>
     </div>
   );
 }
