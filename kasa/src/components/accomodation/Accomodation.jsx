@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import accommodations from '../../datas/logements.json';
 import './accomodation.scss'
+import '../../assets/downArrow.png'
 
 function AccommodationDetails() {
   const { id } = useParams();
@@ -21,21 +22,35 @@ function AccommodationDetails() {
   return (
     <div className='wrapper'>
       <div className='carousel'>
-      <img src={pictures[currentIndex]} alt={accommodation.title} className='carousel-image' />
+        <img src={pictures[currentIndex]} alt={accommodation.title} className='carousel-image' />
         <button className='carousel-button prev' onClick={handlePrev}>&lt;</button>
         <button className='carousel-button next' onClick={handleNext}>&gt;</button>
-      </div>
-      <h1>{accommodation.title}</h1>
-      <h2>{accommodation.location}</h2>
-      <div className='tags'>
-        {accommodation.tags.map((tag, index) => (
-          <span key={index} className='tag'>{tag}</span>
-        ))}
+        <p className='imgCounter'>
+           {pictures.length > 1 ? `${currentIndex + 1}/${pictures.length}` : ''}
+        </p>
+
       </div>
 
+      <div className='leftWrap'>
+        <h1>{accommodation.title}</h1>
+        <h2>{accommodation.location}</h2>
+        <div className='tags'>
+          {accommodation.tags.map((tag, index) => (
+            <span key={index} className='tag'>{tag}</span>
+          ))}
+        </div>
+      </div>
+      
 
-      <p>{accommodation.description}</p>
-      <p>Price: ${accommodation.price}</p>
+        <div className='description'>
+          <p className='descTitle'>Description</p>
+          <img src="../../assets/downArrow" alt="downArrow" />
+          <p>{accommodation.description}</p>
+        </div>
+        <div className='host'>
+          <p></p>
+        </div>
+    
     </div>
   );
 }
