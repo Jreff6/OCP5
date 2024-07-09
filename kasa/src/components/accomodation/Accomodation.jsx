@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import accommodations from '../../datas/logements.json';
 import './accomodation.scss';
-import downArrow from '../../assets/downArrow.png'; // Assurez-vous que l'image est importée correctement
+import Collapse from '../../components/collapse/Collapse'
 
 function AccommodationDetails() {
   const { id } = useParams();
@@ -34,39 +34,33 @@ function AccommodationDetails() {
         </p>
       </div>
 
-      <div className='leftWrap'>
-        <h1>{accommodation.title}</h1>
-        <h2>{accommodation.location}</h2>
-        <div className='tags'>
-          {accommodation.tags.map((tag, index) => (
-            <span key={index} className='tag'>{tag}</span>
-          ))}
-        </div>
-      </div>
-
-      <div className='rightWrap'>
-        <div className='host'>
-          <p className='hostname'> {accommodation.host.name}</p>
-          <img src={accommodation.host.picture} alt="host" className='hostPic' />
-          <span className='hostRating'></span>
-        </div>
-      </div>
-
-      <div className='bottomWrap'>
-        <div className='description'>
-          <p className='descTitle'>Description</p>
-          <img src={downArrow} alt="downArrow" />
-          <p>{accommodation.description}</p>
-        </div>
-        <div className='EquipmentsWrap'>
-          <div className='equipments'>
-            {accommodation.equipments.map((equipment, index) => (
-              <span key={index} className='equipment'>{equipment}</span>
+      <div className='midWrap'>
+        <div className='leftWrap'>
+          <h1>{accommodation.title}</h1>
+          <h2>{accommodation.location}</h2>
+          <div className='tags'>
+            {accommodation.tags.map((tag, index) => (
+              <span key={index} className='tag'>{tag}</span>
             ))}
           </div>
         </div>
-      </div>
+
+        <div className='rightWrap'>
+          <div className='host'>
+            <p className='hostname'> {accommodation.host.name}</p>
+            <img src={accommodation.host.picture} alt="host" className='hostPic' />
+            
+            <span className='hostRating'></span>
+          </div>
+        </div>
+      </div>  
+
+      <div className='bottomWrap'>
+      <Collapse title="Description" content={accommodation.description} />
+      <Collapse title="Equipements" content={accommodation.equipments} />
     </div>
+      </div>
+    
   );
 }
 
