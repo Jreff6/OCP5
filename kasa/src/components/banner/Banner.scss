@@ -1,12 +1,13 @@
-.bannerWrap{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-}
+@import '../../styles/variables';
 
-.bannerWrap button{
+.bannerWrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  button {
     background: none;
     border: none;
     cursor: pointer;
@@ -14,9 +15,8 @@
     font-weight: 500;
     font-family: inherit;
 
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
-
-.bannerWrap button:hover{
-    text-decoration: underline;
-}
- 

@@ -1,26 +1,29 @@
-#main{
+@import '../../styles/variables';
+
+#main {
     width: 100%;
 }
 
-.wrapper{
+.wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #FF6060;
+    color: $primary-color;
 }
-.errorNum{
+
+.errorNum {
     font-size: 288px;
     font-weight: 700;
     margin: 0;
 }
 
-.info{
+.info {
     font-size: 36px;
     margin: 0px;
 }
 
-.return{
+.return {
     color: black;
     text-decoration: underline;
     cursor: pointer;
