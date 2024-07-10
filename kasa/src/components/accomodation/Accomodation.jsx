@@ -56,8 +56,8 @@ function AccommodationDetails() {
       </div>  
 
       <div className='bottomWrap'>
-      <Collapse title="Description" content={accommodation.description} />
-      <Collapse title="Equipements" content={accommodation.equipments} />
+      <Collapse  title="Description" content={accommodation.description} />
+      <Collapse  title="Equipements" content={accommodation.equipments} />
     </div>
       </div>
     
