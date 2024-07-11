@@ -18,7 +18,7 @@ function Banner () {
 
     return (
         <div className='bannerWrap'>
-             <img alt='logo' src={ logo } />
+             <img alt='logo' src={ logo } className='logo' />
             <span className='buttonWrap'>
                 <button onClick={handleNavigateHome}>Accueil</button>
                 <button onClick={handleNavigateAbout}>A Propos</button>

@@ -1,0 +1,23 @@
+.mainWrap{
+    display: flex;
+    flex-direction: column;
+}
+
+.accoWrap{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 25px;
+    width: 100vw;
+}
+
+.collapse{
+    max-width: 582px;
+    max-height: none;
+}
+
+@media (max-width: 375px) {
+    .mainWrapper{
+        padding-left: 20px;
+    }
+}
