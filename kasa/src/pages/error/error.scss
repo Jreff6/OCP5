@@ -5,3 +5,10 @@
     align-items: center;
     padding-top: 2%;
 }
+
+@media(max-width:375px) {
+    .mainWrapper{
+        width: 95vw;
+        padding-left: 0;
+    }
+}
