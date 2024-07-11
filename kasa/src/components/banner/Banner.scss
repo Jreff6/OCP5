@@ -22,7 +22,19 @@
 }
 
 @media(max-width:375px){
+
+  .about {
+    width: 83vw;
+  }
   .logo{
-    size: 50px;
+    max-width: 145px;
+  }
+
+  .bannerWrap { 
+    margin-top: 20px;
+  }
+
+  .bannerWrap Button{
+    font-size: 12px;
   }
 }

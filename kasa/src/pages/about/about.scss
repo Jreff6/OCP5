@@ -28,3 +28,13 @@
 .FooterWrapper{
     margin-top: 50px;
 }
+
+@media(max-width: 375px) {
+    .about{
+        width: 90vw;
+    }
+
+    .bannerWrap{
+        margin-bottom: 20px;
+    }
+}

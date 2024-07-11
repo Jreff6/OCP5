@@ -24,4 +24,15 @@
         border-radius: 50px; 
         z-index: 1; 
     }
+};
+
+@media(max-width:375px){
+    .moutain{
+        height: 111px;
+        border-radius: 10px;
+
+        &::before{
+            height: 111px;
+        }
+    }
 }
