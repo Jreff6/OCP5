@@ -38,3 +38,26 @@
              1px  1px 0 #000; /* Bordure simulée en utilisant des ombres */
     }
 }
+
+
+@media (max-width:375px){
+    
+    .QuoteWrapper{
+        max-width: 335px;
+        border-radius: 10px;
+        max-height: 111px;
+
+        &::before{
+            border-radius: 10px;
+        }
+
+        .text{
+            font-size: 24px;
+            max-width: 63%;
+            
+        }
+    };
+
+    
+
+}

@@ -148,3 +148,15 @@ h1, h2 {
   max-height: 52px;
 
 }
+
+.collapse_content{
+  color: black;
+
+  &p{
+    padding: 0;
+  }
+}
+
+.collapse_content_hidden{
+  color: black;
+}
