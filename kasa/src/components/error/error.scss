@@ -2,6 +2,8 @@
 
 #main {
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .wrapper {
@@ -13,13 +15,13 @@
 }
 
 .errorNum {
-    font-size: 288px;
+    font-size: calc(96px + (288 - 96) * ((100vw - 375px) / (1920 - 375)));
     font-weight: 700;
     margin: 0;
 }
 
 .info {
-    font-size: 36px;
+    font-size: calc(18px + (36 - 18) * ((100vw - 375px) / (1920 - 375)));
     margin: 0px;
 }
 
@@ -46,3 +48,4 @@
 
 
 }
+

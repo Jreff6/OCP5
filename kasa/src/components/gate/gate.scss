@@ -8,5 +8,20 @@
     justify-items: center; 
     align-items: start; 
     overflow: hidden;
+
+    @media (max-width: 1195px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 50px;
+    }
+  
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 30px;
+    }
+  
+    @media (max-width: 480px) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+    }
     
   }
