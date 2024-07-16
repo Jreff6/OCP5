@@ -76,7 +76,7 @@ h1, h2 {
 .leftWrap {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 50%;
 
   > h2 {
     margin-top: 12px;
@@ -104,7 +104,7 @@ h1, h2 {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  width: 30%;
+  width: 50%;
 }
 
 .host {
@@ -118,6 +118,7 @@ h1, h2 {
   font-size: 18px;
   font-weight: 500;
   margin-top: 5px;
+  width: 50%;
 }
 
 .hostPic {
