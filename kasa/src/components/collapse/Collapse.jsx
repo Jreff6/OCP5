@@ -1,6 +1,7 @@
 import './collapse.scss'
-import arrow from '../../assets/downArrow.png';
 import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
 function Collapse({title, content}) {
 
@@ -11,11 +12,7 @@ function Collapse({title, content}) {
             <div className="collapse" >
                 <h3 className='collapse_title' onClick={() => setToggle(!toggle)} >
                     {title}
-                    <img 
-                        className={toggle ? 'arrow arrow_up' : 'arrow arrow_down'} 
-                        src={arrow} 
-                        alt="show content" 
-                    />
+                    <FontAwesomeIcon icon={faChevronUp} className={toggle ? 'arrow arrow_up' : 'arrow arrow_down'}/> 
                 </h3>
                 <div className={toggle ? 'collapse_content' : 'collapse_content_hidden'}>
                     {Array.isArray(content) ? content.map((item, index) => {

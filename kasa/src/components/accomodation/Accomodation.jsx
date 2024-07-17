@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import accommodations from '../../datas/logements.json';
 import './accomodation.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Collapse from '../../components/collapse/Collapse'
+import Rating from '../../components/rating/Rating'
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
+
 
 function AccommodationDetails() {
   const { id } = useParams();
@@ -25,8 +29,9 @@ function AccommodationDetails() {
         <img src={pictures[currentIndex]} alt={accommodation.title} className='carousel-image' />
         {pictures.length > 1 && (
         <div className='buttonWrap'>
-          <button className='carousel-button prev' onClick={handlePrev}>&lt;</button>
-          <button className='carousel-button next' onClick={handleNext}>&gt;</button>
+          <button className='carousel-button prev' onClick={handlePrev}> <FontAwesomeIcon icon={faChevronUp} /> </button>
+
+          <button className='carousel-button next' onClick={handleNext}> <FontAwesomeIcon icon={faChevronUp} /></button>
         </div>
   )}
         <p className='imgCounter'>
@@ -50,7 +55,7 @@ function AccommodationDetails() {
             <p className='hostname'> {accommodation.host.name}</p>
             <img src={accommodation.host.picture} alt="host" className='hostPic' />
             
-            <span className='hostRating'></span>
+            <Rating rating={accommodation.rating} />
           </div>
         </div>
       </div>  
@@ -59,7 +64,7 @@ function AccommodationDetails() {
       <Collapse className ='accoCollapse' title="Description" content={accommodation.description} />
       <Collapse className ='accoCollapse'  title="Equipements" content={accommodation.equipments} />
     </div>
-      </div>
+  </div>
     
   );
 }
