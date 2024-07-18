@@ -8,11 +8,22 @@
     align-items: center;
     justify-content: space-between;
     padding-top: 40px;
+
+    .bannerWrap{
+        .buttonWrap{
+            .btnAbout{
+                text-decoration: underline;
+            }
+        }
+
+    }
+    
 }
 
 .bannerWrap{
     max-width: 1240px;
     margin-bottom: 38px;
+
 }
 
 .about_main{

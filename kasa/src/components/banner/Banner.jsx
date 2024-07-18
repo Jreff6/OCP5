@@ -20,8 +20,8 @@ function Banner () {
         <div className='bannerWrap'>
              <img alt='logo' src={ logo } className='logo' />
             <span className='buttonWrap'>
-                <button onClick={handleNavigateHome}>Accueil</button>
-                <button onClick={handleNavigateAbout}>A Propos</button>
+                <button className='btnHome' onClick={handleNavigateHome}>Accueil</button>
+                <button className='btnAbout' onClick={handleNavigateAbout}>A Propos</button>
             </span>  
         </div>
     );

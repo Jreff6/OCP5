@@ -7,7 +7,18 @@
     flex-direction: column;
   
     align-items: center;
+
+    .bannerWrap{
+      
+      .buttonWrap{
+
+        .btnHome{
+          text-decoration: underline;
+        }
+      }
+    }
   }
+
   
   .top :first-child{
     margin : 45px 0 50px 0;
