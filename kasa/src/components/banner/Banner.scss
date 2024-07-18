@@ -11,7 +11,7 @@
     background: none;
     border: none;
     cursor: pointer;
-    font-size: 24px;
+    font-size: calc(12px + (24 - 12) * ((100vw - 375px) / (1440 - 375)));
     font-weight: 500;
     font-family: inherit;
 

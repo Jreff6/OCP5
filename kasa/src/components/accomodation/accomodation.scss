@@ -4,6 +4,11 @@ h1, h2 {
   margin: 0;
 }
 
+.accoWrap{
+  display: flex;
+  width: 90%;
+  align-items: center;
+}
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -163,14 +168,6 @@ h1, h2 {
 
 }
 
-#accoCollapse{
-  width: 100%;
-  max-width: 582px;
-  height: 50%;
-  max-height: 52px;
-
-}
-
 .collapse_content{
   color: black;
 
@@ -215,5 +212,72 @@ h1, h2 {
 
   .tag{
     padding: 4px 17px;
+  }
+}
+
+@media (max-width: 760px){
+
+    .midWrap{
+      flex-direction: column;
+
+      .leftWrap{
+        width: 100%;
+      }
+
+      .rightWrap{
+        width: 100%;
+        height: 85px;
+
+        .host{
+          width: 100%;
+          max-width: 100%;
+          position: relative;
+          min-height: 100%;
+
+          .hostPic{
+            position: absolute;
+            top: 50%;
+            right: 0;
+          }
+
+          .hostname{
+            position: absolute;
+            top: 50%;
+            right: 20%;
+            width: 0%;
+          }
+
+          .rating{
+            position: absolute;
+            top: 50%;
+            left: 0;
+          }
+
+
+        }
+      }
+    }
+
+    .bottomWrap{
+      flex-direction: column;
+      
+      .collapse{
+        width: 100%;
+        max-width: none;
+      }
+    }
+}
+
+@media (max-width: 480px){
+
+  .midWrap{
+
+    .rightWrap{
+      .host{
+        .hostname{
+          right: 25%;
+        }
+      }
+    }
   }
 }
