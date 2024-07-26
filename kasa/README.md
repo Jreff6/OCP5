@@ -2,10 +2,6 @@ Pour démarrer cette application React, après l'avoir téléchargée rendez vou
 
 cd kasa
 
-puis installez les dépendances avec 
+puis installez les dépendances et lancez le projet avec :
 
-npm i 
-
-puis vous pouvez déparrer le projet avec 
-
-npm start 
+npm i && npm start
